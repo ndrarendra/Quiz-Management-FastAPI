@@ -13,6 +13,9 @@ psycopg2-binary = "^2.9.10"
 Jinja2= "^3.1.6"
 passlib = { extras = ["bcrypt"], version = "^1.7.4" }
 python-dotenv = "^1.0.0"
+pydantic = {version = "*", extras = ["email"]}
+python-jose = "^3.3.0"
+python-multipart = "^0.0.20"
 
 [build-system]
 requires = ["poetry-core"]
