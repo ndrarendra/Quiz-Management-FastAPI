@@ -17,7 +17,7 @@ router = APIRouter(prefix="/ui/admin", tags=["UI", "Admin"])
 
 
 @router.get("/quizzes", response_model=list[QuizOut], tags=["Quiz Retrieval"])
-@cache(expire=60)  # Cache the list of quizzes for 60 seconds to improve performance.
+@cache(expire=60)  # Cache for 60 seconds to improve performance.
 def list_quizzes(
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1),
@@ -42,6 +42,7 @@ def list_quizzes(
     return quizzes
 
 @router.get("/quizzes/{quiz_id}", response_model=QuizDetailOut, tags=["Quiz Retrieval"])
+@cache(expire=60)  # Cache for 60 seconds to improve performance.
 def get_quiz_detail(
     quiz_id: int,
     page: int = Query(1, ge=1),
