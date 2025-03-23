@@ -107,7 +107,7 @@ class QuizAttempt(Base):
     """
     __tablename__ = "quiz_attempts"
     id = Column(Integer, primary_key=True, index=True)  # Primary key with an index.
-    quiz_id = Column(Integer, ForeignKey("quizzes.id"), nullable=False)  # Link to the quiz.
+    quiz_id = Column(Integer, ForeignKey("quizzes.id", ondelete="CASCADE"), nullable=False)  # Link to the quiz.
     user_id = Column(Integer)  # Ideally, this should be a foreign key to a User table.
     started_at = Column(DateTime, default=datetime.utcnow)  # When the attempt started.
     submitted_at = Column(DateTime, nullable=True)  # When the attempt was submitted; null if not submitted.
