@@ -7,8 +7,8 @@ from app.models.user import User as UserModel
 from app.auth import get_current_user, get_db  # or wherever get_current_user is defined
 from app.schemas.quiz import QuizCreate, QuizOut
 
-# Constant defining the required number of choices for each question.
-REQUIRED_NUM_CHOICES = 4  # Alternatively, import this constant from a dedicated constants file if needed.
+# Constant defining the required number of choices for each question. (N+2)
+REQUIRED_NUM_CHOICES = 4 
 
 # Define the router for admin quiz management endpoints.
 router = APIRouter(prefix="/admin/quizzes", tags=["Admin", "Quiz Management"])

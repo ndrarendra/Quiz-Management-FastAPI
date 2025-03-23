@@ -88,7 +88,7 @@ The API endpoints are organized into logical groups:
 - **Quizzes**:
   - Use the provided JSON files (`test_1.json`, `test_2.json`, `test_3.json`) via the API endpoint (`admin/quizzes`).
   - Copy the json data into the API 
-
+  - Set the REQUIRED_NUM_CHOICES in the app/routers/admin_nonui_quiz.py to apply n+2 , The Default is 4.
 ### Testing Quizzes
 - Login as a regular user (Admins cannot attempt quizzes)
 - Begin testing by accessing quizzes available through the UI or API.
