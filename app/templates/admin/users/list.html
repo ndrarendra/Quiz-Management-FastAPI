@@ -1,0 +1,33 @@
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin - User List{% endblock %}
+
+{% block content %}
+<h1>All Users</h1>
+<p><a class="btn btn-primary" href="/ui/admin/users/create">Create New User</a></p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Is Admin?</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ u.id }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.is_admin }}</td>
+      <td>
+        <!-- Example: Possibly add an "Edit" link if you want an edit feature -->
+        <a class="btn btn-danger btn-sm" href="/ui/admin/users/{{ u.id }}/delete">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

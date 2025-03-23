@@ -1,0 +1,13 @@
+<!-- app/templates/admin/quizzes/delete.html -->
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin - Delete Quiz{% endblock %}
+
+{% block content %}
+<h1>Delete Quiz</h1>
+<p>Are you sure you want to delete the quiz: <strong>{{ quiz.title }}</strong>?</p>
+<form method="post" action="/ui/admin/quizzes/{{ quiz.id }}/delete">
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a class="btn btn-secondary" href="/ui/admin/quizzes">Cancel</a>
+</form>
+{% endblock %}

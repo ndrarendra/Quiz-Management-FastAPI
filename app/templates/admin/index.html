@@ -1,0 +1,13 @@
+<!-- app/templates/admin_index.html -->
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin Home{% endblock %}
+
+{% block content %}
+<h1>Welcome, Admin {{ user.username }}!</h1>
+<p>This is the Admin Dashboard.</p>
+
+<!-- Example links to other admin pages: -->
+<a class="btn btn-primary" href="/ui/admin/quizzes">Manage Quizzes</a>
+<a class="btn btn-primary" href="/ui/admin/quiz_attempts">View Quiz Attempts</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin - Delete User{% endblock %}
+
+{% block content %}
+<h1>Delete User</h1>
+<p>Are you sure you want to delete user: <strong>{{ user_obj.username }}</strong>?</p>
+<form method="post" action="/ui/admin/users/{{ user_obj.id }}/delete">
+  <button class="btn btn-danger" type="submit">Yes, Delete</button>
+  <a class="btn btn-secondary" href="/ui/admin/users">Cancel</a>
+</form>
+{% endblock %}

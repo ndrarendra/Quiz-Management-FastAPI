@@ -1,0 +1,44 @@
+<!-- app/templates/admin/quizzes/list.html -->
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin - Quiz List{% endblock %}
+
+{% block content %}
+<h1>Quiz List (Admin)</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Exam Count</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for quiz in quizzes %}
+        <tr>
+            <td>{{ quiz.id }}</td>
+            <td>{{ quiz.title }}</td>
+            <td>{{ quiz.description }}</td>
+            <td>{{ quiz.exam_question_count }}</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="/ui/admin/quizzes/{{ quiz.id }}/edit">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/ui/admin/quizzes/{{ quiz.id }}/delete">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<div>
+    {% if page > 1 %}
+      <a href="/ui/admin/quizzes?page={{ page - 1 }}&page_size={{ page_size }}">Previous</a>
+    {% endif %}
+    Page {{ page }} of {{ total_pages }}
+    {% if page < total_pages %}
+      <a href="/ui/admin/quizzes?page={{ page + 1 }}&page_size={{ page_size }}">Next</a>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,145 @@
+{
+    "title": "The 30-Question Geography Quiz",
+    "description": "A quiz featuring 30 questions to test your geography knowledge.",
+    "exam_question_count": 30,
+    "randomize_questions": false,
+    "randomize_choices": false,
+    "questions": [
+      {
+        "text": "Question 1: What is the capital city of Australia?",
+        "choices": [
+          { "text": "Canberra", "is_correct": true },
+          { "text": "Sydney", "is_correct": false },
+          { "text": "Melbourne", "is_correct": false },
+          { "text": "Brisbane", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 2: Which country has the longest coastline in the world?",
+        "choices": [
+          { "text": "Canada", "is_correct": true },
+          { "text": "Russia", "is_correct": false },
+          { "text": "Indonesia", "is_correct": false },
+          { "text": "Australia", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 3: Which river is the longest in South America?",
+        "choices": [
+          { "text": "Amazon River", "is_correct": true },
+          { "text": "Paraná River", "is_correct": false },
+          { "text": "Orinoco River", "is_correct": false },
+          { "text": "Rio de la Plata", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 4: What is the smallest country in the world by land area?",
+        "choices": [
+          { "text": "Vatican City", "is_correct": true },
+          { "text": "Monaco", "is_correct": false },
+          { "text": "San Marino", "is_correct": false },
+          { "text": "Liechtenstein", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 5: Which continent is known as the 'Frozen Continent'?",
+        "choices": [
+          { "text": "Antarctica", "is_correct": true },
+          { "text": "Arctic", "is_correct": false },
+          { "text": "Asia", "is_correct": false },
+          { "text": "Europe", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 6: Which mountain range runs along the western coast of South America?",
+        "choices": [
+          { "text": "Andes", "is_correct": true },
+          { "text": "Rockies", "is_correct": false },
+          { "text": "Alps", "is_correct": false },
+          { "text": "Himalayas", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 7: What is the capital city of Egypt?",
+        "choices": [
+          { "text": "Cairo", "is_correct": true },
+          { "text": "Alexandria", "is_correct": false },
+          { "text": "Luxor", "is_correct": false },
+          { "text": "Giza", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 8: Which country is the largest by area?",
+        "choices": [
+          { "text": "Russia", "is_correct": true },
+          { "text": "Canada", "is_correct": false },
+          { "text": "China", "is_correct": false },
+          { "text": "United States", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 9: What is the longest river in Europe?",
+        "choices": [
+          { "text": "Volga River", "is_correct": true },
+          { "text": "Danube River", "is_correct": false },
+          { "text": "Rhine River", "is_correct": false },
+          { "text": "Elbe River", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 10: Which ocean is Bermuda located in?",
+        "choices": [
+          { "text": "Atlantic Ocean", "is_correct": true },
+          { "text": "Indian Ocean", "is_correct": false },
+          { "text": "Pacific Ocean", "is_correct": false },
+          { "text": "Arctic Ocean", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 11: Which US state is known as the 'Sunshine State'?",
+        "choices": [
+          { "text": "Florida", "is_correct": true },
+          { "text": "California", "is_correct": false },
+          { "text": "Texas", "is_correct": false },
+          { "text": "Arizona", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 12: What is the capital city of South Korea?",
+        "choices": [
+          { "text": "Seoul", "is_correct": true },
+          { "text": "Busan", "is_correct": false },
+          { "text": "Incheon", "is_correct": false },
+          { "text": "Daegu", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 13: What desert covers much of northern Africa?",
+        "choices": [
+          { "text": "Sahara", "is_correct": true },
+          { "text": "Kalahari", "is_correct": false },
+          { "text": "Gobi", "is_correct": false },
+          { "text": "Atacama", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 14: Which is the largest island in the world?",
+        "choices": [
+          { "text": "Greenland", "is_correct": true },
+          { "text": "Borneo", "is_correct": false },
+          { "text": "Madagascar", "is_correct": false },
+          { "text": "New Guinea", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 15: What is the capital of Italy?",
+        "choices": [
+          { "text": "Rome", "is_correct": true },
+          { "text": "Venice", "is_correct": false },
+          { "text": "Florence", "is_correct": false },
+          { "text": "Milan", "is_correct": false }
+        ]
+      }
+    ]
+  }
+  

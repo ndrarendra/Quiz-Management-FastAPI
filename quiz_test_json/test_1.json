@@ -1,0 +1,280 @@
+{
+    "title": "The 30-Question Quiz",
+    "description": "A quiz featuring 30 questions to test knowledge across multiple subjects.",
+    "exam_question_count": 30,
+    "randomize_questions": false,
+    "randomize_choices": false,
+    "questions": [
+      {
+        "text": "Question 1: Which planet is closest to the Sun?",
+        "choices": [
+          { "text": "Mercury", "is_correct": true },
+          { "text": "Venus", "is_correct": false },
+          { "text": "Earth", "is_correct": false },
+          { "text": "Mars", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 2: What is the capital of France?",
+        "choices": [
+          { "text": "Paris", "is_correct": true },
+          { "text": "Rome", "is_correct": false },
+          { "text": "London", "is_correct": false },
+          { "text": "Berlin", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 3: 2 + 2 = ?",
+        "choices": [
+          { "text": "3", "is_correct": false },
+          { "text": "4", "is_correct": true },
+          { "text": "5", "is_correct": false },
+          { "text": "2", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 4: Which scientist developed the theory of relativity?",
+        "choices": [
+          { "text": "Albert Einstein", "is_correct": true },
+          { "text": "Isaac Newton", "is_correct": false },
+          { "text": "Galileo Galilei", "is_correct": false },
+          { "text": "Nikola Tesla", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 5: Which chemical element has the symbol 'O'?",
+        "choices": [
+          { "text": "Oxygen", "is_correct": true },
+          { "text": "Osmium", "is_correct": false },
+          { "text": "Oganesson", "is_correct": false },
+          { "text": "Gold", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 6: Who painted the Mona Lisa?",
+        "choices": [
+          { "text": "Leonardo da Vinci", "is_correct": true },
+          { "text": "Michelangelo", "is_correct": false },
+          { "text": "Raphael", "is_correct": false },
+          { "text": "Vincent van Gogh", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 7: Which country is known as the Land of the Rising Sun?",
+        "choices": [
+          { "text": "China", "is_correct": false },
+          { "text": "South Korea", "is_correct": false },
+          { "text": "Japan", "is_correct": true },
+          { "text": "Thailand", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 8: What gas do plants primarily absorb for photosynthesis?",
+        "choices": [
+          { "text": "Oxygen", "is_correct": false },
+          { "text": "Carbon Dioxide", "is_correct": true },
+          { "text": "Nitrogen", "is_correct": false },
+          { "text": "Helium", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 9: Who wrote 'Romeo and Juliet'?",
+        "choices": [
+          { "text": "Charles Dickens", "is_correct": false },
+          { "text": "Jane Austen", "is_correct": false },
+          { "text": "William Shakespeare", "is_correct": true },
+          { "text": "George Orwell", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 10: Which ocean is the largest on Earth?",
+        "choices": [
+          { "text": "Atlantic Ocean", "is_correct": false },
+          { "text": "Pacific Ocean", "is_correct": true },
+          { "text": "Indian Ocean", "is_correct": false },
+          { "text": "Arctic Ocean", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 11: Which language is primarily spoken in Brazil?",
+        "choices": [
+          { "text": "Spanish", "is_correct": false },
+          { "text": "Portuguese", "is_correct": true },
+          { "text": "French", "is_correct": false },
+          { "text": "English", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 12: Which mammal is known for its ability to fly?",
+        "choices": [
+          { "text": "Bat", "is_correct": true },
+          { "text": "Eagle", "is_correct": false },
+          { "text": "Penguin", "is_correct": false },
+          { "text": "Ostrich", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 13: The Great Wall of China was primarily built to protect against raids from which group?",
+        "choices": [
+          { "text": "The Mongols", "is_correct": true },
+          { "text": "The Japanese", "is_correct": false },
+          { "text": "The Indians", "is_correct": false },
+          { "text": "The Russians", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 14: Which metal is liquid at room temperature?",
+        "choices": [
+          { "text": "Gold", "is_correct": false },
+          { "text": "Mercury", "is_correct": true },
+          { "text": "Iron", "is_correct": false },
+          { "text": "Lead", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 15: Who discovered penicillin?",
+        "choices": [
+          { "text": "Alexander Fleming", "is_correct": true },
+          { "text": "Louis Pasteur", "is_correct": false },
+          { "text": "Robert Koch", "is_correct": false },
+          { "text": "Marie Curie", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 16: Which continent is the Sahara Desert located on?",
+        "choices": [
+          { "text": "Asia", "is_correct": false },
+          { "text": "Africa", "is_correct": true },
+          { "text": "Australia", "is_correct": false },
+          { "text": "South America", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 17: Which instrument measures atmospheric pressure?",
+        "choices": [
+          { "text": "Thermometer", "is_correct": false },
+          { "text": "Barometer", "is_correct": true },
+          { "text": "Hygrometer", "is_correct": false },
+          { "text": "Anemometer", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 18: Which blood type is known as the universal donor?",
+        "choices": [
+          { "text": "A", "is_correct": false },
+          { "text": "B", "is_correct": false },
+          { "text": "AB", "is_correct": false },
+          { "text": "O", "is_correct": true }
+        ]
+      },
+      {
+        "text": "Question 19: Who developed the polio vaccine?",
+        "choices": [
+          { "text": "Albert Sabin", "is_correct": false },
+          { "text": "Jonas Salk", "is_correct": true },
+          { "text": "Edward Jenner", "is_correct": false },
+          { "text": "Joseph Lister", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 20: What is the largest planet in our solar system?",
+        "choices": [
+          { "text": "Mars", "is_correct": false },
+          { "text": "Earth", "is_correct": false },
+          { "text": "Jupiter", "is_correct": true },
+          { "text": "Saturn", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 21: In which US state is the Grand Canyon located?",
+        "choices": [
+          { "text": "California", "is_correct": false },
+          { "text": "Nevada", "is_correct": false },
+          { "text": "Arizona", "is_correct": true },
+          { "text": "Utah", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 22: 'E=mc²' is the famous equation by which scientist?",
+        "choices": [
+          { "text": "Niels Bohr", "is_correct": false },
+          { "text": "Max Planck", "is_correct": false },
+          { "text": "Albert Einstein", "is_correct": true },
+          { "text": "Erwin Schrödinger", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 23: Which country gave the Statue of Liberty to the USA?",
+        "choices": [
+          { "text": "France", "is_correct": true },
+          { "text": "Spain", "is_correct": false },
+          { "text": "Italy", "is_correct": false },
+          { "text": "England", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 24: What is the largest mammal in the world?",
+        "choices": [
+          { "text": "African Elephant", "is_correct": false },
+          { "text": "Blue Whale", "is_correct": true },
+          { "text": "Giraffe", "is_correct": false },
+          { "text": "Polar Bear", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 25: Which continent has the most countries?",
+        "choices": [
+          { "text": "Africa", "is_correct": true },
+          { "text": "Asia", "is_correct": false },
+          { "text": "Europe", "is_correct": false },
+          { "text": "North America", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 26: Which vitamin is produced when a person is exposed to sunlight?",
+        "choices": [
+          { "text": "Vitamin A", "is_correct": false },
+          { "text": "Vitamin B12", "is_correct": false },
+          { "text": "Vitamin C", "is_correct": false },
+          { "text": "Vitamin D", "is_correct": true }
+        ]
+      },
+      {
+        "text": "Question 27: Which metal is the best conductor of electricity?",
+        "choices": [
+          { "text": "Copper", "is_correct": false },
+          { "text": "Silver", "is_correct": true },
+          { "text": "Aluminum", "is_correct": false },
+          { "text": "Gold", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 28: In which year did World War II end?",
+        "choices": [
+          { "text": "1941", "is_correct": false },
+          { "text": "1943", "is_correct": false },
+          { "text": "1945", "is_correct": true },
+          { "text": "1948", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 29: The Great Barrier Reef is located off the coast of which country?",
+        "choices": [
+          { "text": "USA", "is_correct": false },
+          { "text": "Australia", "is_correct": true },
+          { "text": "South Africa", "is_correct": false },
+          { "text": "India", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 30: Which organ filters blood in the human body?",
+        "choices": [
+          { "text": "Heart", "is_correct": false },
+          { "text": "Kidneys", "is_correct": true },
+          { "text": "Liver", "is_correct": false },
+          { "text": "Lungs", "is_correct": false }
+        ]
+      }
+    ]
+  }
+  

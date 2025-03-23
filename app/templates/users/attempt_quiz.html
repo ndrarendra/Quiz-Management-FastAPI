@@ -1,0 +1,96 @@
+<!-- app/templates/users/attempt_quiz.html -->
+{% extends "/users/base.html" %}
+
+{% block title %}Attempt Quiz{% endblock %}
+
+{% block content %}
+<h1>{{ quiz.title }}</h1>
+<p>{{ quiz.description }}</p>
+
+<form id="quiz-form" method="post" action="/ui/quiz/{{ quiz.id }}/submit">
+  {% for question in exam_data %}
+  <div class="card mb-3">
+    <div class="card-header">
+      <strong>Question {{ loop.index }}:</strong> {{ question.text }}
+    </div>
+    <div class="card-body">
+      {% for choice in question.choices %}
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="answer_{{ question.question_id }}"
+          id="choice_{{ question.question_id }}_{{ choice.choice_id }}"
+          value="{{ choice.choice_id }}"
+        >
+        <label class="form-check-label" for="choice_{{ question.question_id }}_{{ choice.choice_id }}">
+          {{ choice.text }}
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- The final Submit Quiz button -->
+  <button type="submit" class="btn btn-success" id="submit-btn">Submit Quiz</button>
+</form>
+
+<script>
+  //////////////////////////////
+  // Confirmation on Final Submit
+  //////////////////////////////
+  const quizForm = document.getElementById("quiz-form");
+  quizForm.addEventListener("submit", (event) => {
+    const confirmed = confirm("Are you sure you want to submit? You will NOT be able to resubmit.");
+    if (!confirmed) {
+      event.preventDefault(); // Stop submission if canceled
+    }
+  });
+
+  //////////////////////////////
+  // Auto-Save Logic
+  //////////////////////////////
+
+  // 1) Function to gather current page answers
+  function getCurrentAnswers() {
+    let answers = [];
+    // Find all checked radio buttons
+    const checkedRadios = document.querySelectorAll("input[type='radio']:checked");
+    checkedRadios.forEach(el => {
+      // e.g. 'answer_123'
+      let parts = el.name.split("_");
+      let questionId = parseInt(parts[1]);
+      let choiceId = parseInt(el.value);
+      answers.push({ question_id: questionId, choice_id: choiceId });
+    });
+    return answers;
+  }
+
+  // 2) Auto-save function: POST to your auto-save endpoint
+  async function autoSaveAnswers() {
+    const answers = getCurrentAnswers();
+    try {
+      await fetch("/quizzes/{{ quiz.id }}/autosave", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ answers: answers })
+      });
+      // You could give user feedback (e.g. console.log("Auto-save successful"))
+    } catch (error) {
+      console.error("Auto-save error:", error);
+    }
+  }
+
+  // 3) Trigger auto-save every time a radio button changes
+  const radioInputs = document.querySelectorAll("input[type='radio']");
+  radioInputs.forEach(radio => {
+    radio.addEventListener("change", autoSaveAnswers);
+  });
+
+  // 4) Optionally auto-save on a fixed interval, e.g. every 30s
+  setInterval(autoSaveAnswers, 30000);
+</script>
+{% endblock %}
