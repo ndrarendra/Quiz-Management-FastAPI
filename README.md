@@ -96,5 +96,4 @@ The API endpoints are organized into logical groups:
 - The provided UI is intentionally simple and is meant primarily for testing and demonstration purposes.
 - All API endpoints contain clear descriptions and instructions in English for ease of use.
 
-Enjoy using the Quiz Application!
 
