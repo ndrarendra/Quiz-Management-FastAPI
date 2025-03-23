@@ -16,6 +16,8 @@ python-dotenv = "^1.0.0"
 pydantic = {version = "*", extras = ["email"]}
 python-jose = "^3.3.0"
 python-multipart = "^0.0.20"
+fastapi-cache2 ="^0.2.2"
+
 
 [build-system]
 requires = ["poetry-core"]

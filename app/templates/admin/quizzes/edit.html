@@ -1,0 +1,19 @@
+<!-- app/templates/admin/quizzes/edit.html -->
+{% extends "/admin/base.html" %}
+
+{% block title %}Admin - Edit Quiz{% endblock %}
+
+{% block content %}
+<h1>Edit Quiz</h1>
+{% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+<form method="post" action="/ui/admin/quizzes/{{ quiz_id }}/edit">
+    <div class="form-group">
+        <label for="quiz_data">Quiz Data (JSON)</label>
+        <textarea class="form-control" id="quiz_data" name="quiz_data" rows="15">{{ quiz | tojson(indent=2) }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Quiz</button>
+    <a class="btn btn-secondary" href="/ui/admin/quizzes">Cancel</a>
+</form>
+{% endblock %}

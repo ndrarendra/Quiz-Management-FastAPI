@@ -1,0 +1,56 @@
+<!-- app/templates/admin/quizzes/attempts.html -->
+{% extends "/admin/base.html" %}
+
+{% block title %}Quiz Attempts Overview{% endblock %}
+
+{% block content %}
+<h1>Quiz Attempts Overview</h1>
+
+{% if attempts %}
+  {% for attempt in attempts %}
+    <div class="card mb-3">
+      <div class="card-header">
+        <strong>Attempt ID:</strong> {{ attempt.id }} |
+        <strong>Quiz ID:</strong> {{ attempt.quiz_id }} |
+        <strong>User ID:</strong> {{ attempt.user_id }}<br>
+        <strong>Started At:</strong> {{ attempt.started_at }}
+        {% if attempt.submitted_at %} | <strong>Submitted At:</strong> {{ attempt.submitted_at }}{% endif %} |
+        <strong>Score:</strong> {{ attempt.score }}
+      </div>
+      <div class="card-body">
+        <h4>Exam Data:</h4>
+        {% if attempt.exam_data %}
+          <ul>
+            {% for question in attempt.exam_data %}
+              <li>
+                <strong>Question (ID: {{ question.question_id }}):</strong> {{ question.text }}
+                <ul>
+                  {% for choice in question.choices %}
+                    <li>{{ choice.text }} (Choice ID: {{ choice.choice_id }})</li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No exam data available.</p>
+        {% endif %}
+        <h4>Submitted Answers:</h4>
+        {% if attempt.answers %}
+          <ul>
+            {% for answer in attempt.answers %}
+              <li>Question ID: {{ answer.question_id }}, Selected Choice: {{ answer.choice_id }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No answers submitted.</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <p>No quiz attempts found.</p>
+{% endif %}
+
+<a class="btn btn-secondary" href="/ui/logout">Logout</a>
+{% endblock %}

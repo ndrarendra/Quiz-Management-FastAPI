@@ -1,0 +1,18 @@
+<!-- app/templates/users/user_index.html -->
+{% extends "/users/base.html" %}
+
+{% block title %}User Home{% endblock %}
+
+{% block content %}
+<h1>Welcome, {{ user.username }}!</h1>
+<p>This is your user home page with a list of quizzes.</p>
+<ul class="list-group">
+  {% for quiz in quizzes %}
+  <li class="list-group-item">
+    <h5>{{ quiz.title }}</h5>
+    <p>{{ quiz.description }}</p>
+    <a class="btn btn-primary" href="/ui/quiz/{{ quiz.id }}/attempt">Start Quiz</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

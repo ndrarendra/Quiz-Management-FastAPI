@@ -1,0 +1,145 @@
+{
+    "title": "The 30-Question General Knowledge Quiz 2",
+    "description": "A challenging quiz featuring 30 questions to test your general knowledge across a variety of subjects.",
+    "exam_question_count": 30,
+    "randomize_questions": false,
+    "randomize_choices": false,
+    "questions": [
+      {
+        "text": "Question 1: What is the tallest mountain in the world?",
+        "choices": [
+          { "text": "Mount Everest", "is_correct": true },
+          { "text": "K2", "is_correct": false },
+          { "text": "Kangchenjunga", "is_correct": false },
+          { "text": "Makalu", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 2: Which country hosted the 2016 Summer Olympics?",
+        "choices": [
+          { "text": "Brazil", "is_correct": true },
+          { "text": "Japan", "is_correct": false },
+          { "text": "China", "is_correct": false },
+          { "text": "UK", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 3: What is the currency of Japan?",
+        "choices": [
+          { "text": "Yen", "is_correct": true },
+          { "text": "Won", "is_correct": false },
+          { "text": "Dollar", "is_correct": false },
+          { "text": "Euro", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 4: Who painted 'The Starry Night'?",
+        "choices": [
+          { "text": "Vincent van Gogh", "is_correct": true },
+          { "text": "Claude Monet", "is_correct": false },
+          { "text": "Pablo Picasso", "is_correct": false },
+          { "text": "Leonardo da Vinci", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 5: What is the capital city of Canada?",
+        "choices": [
+          { "text": "Ottawa", "is_correct": true },
+          { "text": "Toronto", "is_correct": false },
+          { "text": "Montreal", "is_correct": false },
+          { "text": "Vancouver", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 6: What is the longest river in the world?",
+        "choices": [
+          { "text": "Nile", "is_correct": true },
+          { "text": "Amazon", "is_correct": false },
+          { "text": "Yangtze", "is_correct": false },
+          { "text": "Mississippi", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 7: What is the chemical formula for water?",
+        "choices": [
+          { "text": "H2O", "is_correct": true },
+          { "text": "CO2", "is_correct": false },
+          { "text": "O2", "is_correct": false },
+          { "text": "CH4", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 8: Who wrote '1984'?",
+        "choices": [
+          { "text": "George Orwell", "is_correct": true },
+          { "text": "Aldous Huxley", "is_correct": false },
+          { "text": "J.K. Rowling", "is_correct": false },
+          { "text": "Mark Twain", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 9: What is the largest land animal?",
+        "choices": [
+          { "text": "African Elephant", "is_correct": true },
+          { "text": "Giraffe", "is_correct": false },
+          { "text": "Rhino", "is_correct": false },
+          { "text": "Hippopotamus", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 10: Who discovered gravity by observing a falling apple?",
+        "choices": [
+          { "text": "Isaac Newton", "is_correct": true },
+          { "text": "Albert Einstein", "is_correct": false },
+          { "text": "Galileo Galilei", "is_correct": false },
+          { "text": "Marie Curie", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 11: What is the smallest unit of matter?",
+        "choices": [
+          { "text": "Atom", "is_correct": true },
+          { "text": "Molecule", "is_correct": false },
+          { "text": "Cell", "is_correct": false },
+          { "text": "Electron", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 12: Which country is known as the Land of Maple Leaf?",
+        "choices": [
+          { "text": "Canada", "is_correct": true },
+          { "text": "USA", "is_correct": false },
+          { "text": "Norway", "is_correct": false },
+          { "text": "Sweden", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 13: What is the capital of Japan?",
+        "choices": [
+          { "text": "Tokyo", "is_correct": true },
+          { "text": "Osaka", "is_correct": false },
+          { "text": "Kyoto", "is_correct": false },
+          { "text": "Nagoya", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 14: What organ in the human body pumps blood?",
+        "choices": [
+          { "text": "Heart", "is_correct": true },
+          { "text": "Liver", "is_correct": false },
+          { "text": "Kidney", "is_correct": false },
+          { "text": "Lungs", "is_correct": false }
+        ]
+      },
+      {
+        "text": "Question 15: Which language is the most spoken worldwide?",
+        "choices": [
+          { "text": "Mandarin Chinese", "is_correct": true },
+          { "text": "English", "is_correct": false },
+          { "text": "Spanish", "is_correct": false },
+          { "text": "Hindi", "is_correct": false }
+        ]
+      }
+    ]
+  }
+  
