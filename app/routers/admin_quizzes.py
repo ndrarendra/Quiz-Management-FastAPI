@@ -116,6 +116,7 @@ def ui_admin_quiz_edit_get(quiz_id: int, request: Request, db: Session = Depends
         "exam_question_count": quiz.exam_question_count,
         "randomize_questions": quiz.randomize_questions,
         "randomize_choices": quiz.randomize_choices,
+        "questions_per_page": quiz.questions_per_page,
         "questions": []
     }
     for q in quiz.questions:
@@ -193,6 +194,7 @@ async def ui_admin_quiz_edit_post(quiz_id: int, request: Request, db: Session = 
     db_quiz.exam_question_count = quiz_payload.get("exam_question_count", db_quiz.exam_question_count)
     db_quiz.randomize_questions = quiz_payload.get("randomize_questions", db_quiz.randomize_questions)
     db_quiz.randomize_choices = quiz_payload.get("randomize_choices", db_quiz.randomize_choices)
+    db_quiz.questions_per_page = quiz_payload.get("questions_per_page", db_quiz.questions_per_page)
     
     # Validate each question has exactly one correct answer.
     for q in quiz_payload.get("questions", []):

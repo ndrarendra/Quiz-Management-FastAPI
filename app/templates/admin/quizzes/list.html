@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for quiz in quizzes %}
+        {% for quiz in quizzes|sort(attribute='id') %}
         <tr>
             <td>{{ quiz.id }}</td>
             <td>{{ quiz.title }}</td>
