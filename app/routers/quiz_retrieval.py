@@ -13,7 +13,7 @@ from app.schemas.quiz import (
     QuizOut, QuizDetailOut, QuizAttemptOut, QuizSubmit
 )
 
-router = APIRouter(prefix="/ui/admin", tags=["UI", "Admin"])
+router = APIRouter(prefix="/ui", tags=["UI"])
 
 
 @router.get("/quizzes", response_model=list[QuizOut], tags=["Quiz Retrieval"])

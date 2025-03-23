@@ -36,7 +36,7 @@ from app.routers import (
 async def lifespan(app: FastAPI):
     FastAPICache.init(InMemoryBackend(), prefix="quiz_cache")
     # Create tables on startup (recommended to use Alembic for production)
-    # Base.metadata.drop_all(bind=engine)
+    #Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
     db: Session = SessionLocal()
     try:

@@ -29,6 +29,7 @@ class Quiz(Base):
     exam_question_count = Column(Integer, default=10)  # Default number of questions for the exam version.
     randomize_questions = Column(Boolean, default=True)  # Whether to randomize question order.
     randomize_choices = Column(Boolean, default=True)  # Whether to randomize choice order.
+    questions_per_page = Column(Integer, default=10) # field for pagination
     questions = relationship(
         "Question",
         back_populates="quiz",

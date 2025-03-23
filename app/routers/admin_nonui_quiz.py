@@ -138,7 +138,9 @@ def update_quiz(
     db_quiz.exam_question_count = quiz.exam_question_count
     db_quiz.randomize_questions = quiz.randomize_questions
     db_quiz.randomize_choices = quiz.randomize_choices
-    
+    db_quiz.questions_per_page = quiz.questions_per_page
+    # ----------------------------------------
+
     # Clear existing questions to update them with the new set.
     db_quiz.questions.clear()
     
@@ -157,6 +159,7 @@ def update_quiz(
     db.refresh(db_quiz)
     
     return db_quiz
+
 
 @router.delete("/{quiz_id}", status_code=204, tags=["Admin", "Quiz Management"])
 def delete_quiz(
