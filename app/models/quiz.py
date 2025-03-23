@@ -30,12 +30,20 @@ class Quiz(Base):
     randomize_questions = Column(Boolean, default=True)  # Whether to randomize question order.
     randomize_choices = Column(Boolean, default=True)  # Whether to randomize choice order.
     questions_per_page = Column(Integer, default=10) # field for pagination
+
+    quiz_attempts = relationship(
+        "QuizAttempt",
+        back_populates="quiz",
+        cascade="all, delete-orphan",
+        passive_deletes=True        
+    )
     questions = relationship(
         "Question",
         back_populates="quiz",
         cascade="all, delete-orphan",  # Delete all questions if the quiz is deleted.
         passive_deletes=True
     )
+    
 
 
 class Question(Base):
@@ -106,3 +114,4 @@ class QuizAttempt(Base):
     score = Column(Integer, nullable=True)  # Score for the attempt; optional.
     exam_data = Column(Text)  # JSON string containing the selected questions and choices order.
     answers = Column(Text, nullable=True)  # JSON string containing the user's answers.
+    quiz = relationship("Quiz", back_populates="quiz_attempts")

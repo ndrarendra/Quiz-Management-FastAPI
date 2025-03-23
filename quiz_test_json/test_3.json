@@ -4,7 +4,7 @@
     "exam_question_count": 30,
     "randomize_questions": false,
     "randomize_choices": false,
-    "questions_per_page": 20,
+    "questions_per_page": 5,
     "questions": [
       {
         "text": "Question 1: What is the capital city of Australia?",
