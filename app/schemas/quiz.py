@@ -52,7 +52,7 @@ class QuizCreate(BaseModel):
     randomize_questions: bool = True  # Flag to randomize the order of questions.
     randomize_choices: bool = True  # Flag to randomize the order of answer choices.
     questions: List[QuestionCreate]  # List of questions for the quiz.
-
+    questions_per_page:int =10 #Pagination Default
 # -------------------------------------------------------------------
 # Schemas for outputting quiz data
 # -------------------------------------------------------------------

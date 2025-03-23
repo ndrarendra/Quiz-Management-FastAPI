@@ -85,24 +85,20 @@ def ui_quiz_attempt(quiz_id: int, request: Request, db: Session = Depends(get_db
     """
     Render the quiz attempt page for a given quiz.
 
-    This endpoint first ensures the user is authenticated. It then retrieves an active quiz attempt for the
-    given quiz. If no active attempt exists, it creates a new one by storing the quiz's questions and choices.
-    Finally, it parses the exam data and renders the quiz attempt page.
-
-    Parameters:
-        quiz_id (int): The unique identifier of the quiz.
-        request (Request): The incoming HTTP request.
-        db (Session): Database session dependency.
-
-    Returns:
-        TemplateResponse: Renders the quiz attempt page with quiz data and exam details,
-                          or a RedirectResponse/HTMLResponse if issues occur.
+    This endpoint ensures the user is authenticated and retrieves or creates an active quiz attempt.
+    It then parses the exam data and paginates it according to the admin-defined 'questions_per_page'
+    setting in the Quiz model.
     """
     # 1) Ensure user is logged in.
     try:
         current_user = get_current_user_from_cookie(request, db)
     except HTTPException:
         return RedirectResponse(url="/ui/login", status_code=302)
+
+    # Retrieve quiz details early so that db_quiz is always available.
+    db_quiz = db.query(Quiz).filter(Quiz.id == quiz_id).first()
+    if not db_quiz:
+        return RedirectResponse(url="/ui", status_code=302)
 
     # 2) Retrieve the most recent active quiz attempt (if any).
     attempt = db.query(QuizAttempt).filter(
@@ -112,12 +108,7 @@ def ui_quiz_attempt(quiz_id: int, request: Request, db: Session = Depends(get_db
 
     # If no active attempt is found, create a new one.
     if not attempt:
-        db_quiz = db.query(Quiz).filter(Quiz.id == quiz_id).first()
-        if not db_quiz:
-            # Redirect if quiz is not found.
-            return RedirectResponse(url="/ui", status_code=302)
-
-        # Store the entire question set as exam_data.
+        # Use the already retrieved db_quiz
         all_questions = db_quiz.questions
         exam_data = []
         for q in all_questions:
@@ -129,7 +120,6 @@ def ui_quiz_attempt(quiz_id: int, request: Request, db: Session = Depends(get_db
                     for c in q.choices
                 ]
             })
-        # Create a new quiz attempt with the exam data stored as a JSON string.
         new_attempt = QuizAttempt(
             quiz_id=quiz_id,
             user_id=current_user.id,
@@ -153,16 +143,32 @@ def ui_quiz_attempt(quiz_id: int, request: Request, db: Session = Depends(get_db
     except Exception:
         exam_data = []
 
-    # 5) Retrieve quiz details (e.g., title) for display.
-    db_quiz = db.query(Quiz).filter(Quiz.id == quiz_id).first()
-    
+    try:
+        saved_answers = json.loads(attempt.answers) if attempt.answers else []
+    except Exception:
+        saved_answers = []
+    # 5) Pagination Logic Using Admin-Defined Questions Per Page:
+    page = int(request.query_params.get("page", 1))
+    # Use the admin's setting; fallback to 10 if not set.
+    page_size = db_quiz.questions_per_page if db_quiz.questions_per_page else 10
+    total = len(exam_data)
+    total_pages = (total + page_size - 1) // page_size
+    start = (page - 1) * page_size
+    paginated_questions = exam_data[start:start + page_size]
+
     # Render the quiz attempt template.
     return templates.TemplateResponse("/users/attempt_quiz.html", {
         "request": request,
         "quiz": db_quiz,
-        "exam_data": exam_data,
-        "user": current_user
+        "exam_data": paginated_questions,
+        "user": current_user,
+        "page": page,
+        "page_size": page_size,
+        "total": total,
+        "total_pages": total_pages,
+        "saved_answers": saved_answers  
     })
+
 
 
 @router.post("/quiz/{quiz_id}/submit", response_class=HTMLResponse, tags=["UI"])

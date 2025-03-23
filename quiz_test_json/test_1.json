@@ -4,6 +4,7 @@
     "exam_question_count": 30,
     "randomize_questions": false,
     "randomize_choices": false,
+    "questions_per_page": 10,
     "questions": [
       {
         "text": "Question 1: Which planet is closest to the Sun?",
