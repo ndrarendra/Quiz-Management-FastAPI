@@ -6,6 +6,7 @@ from app.schemas.user import UserCreate, UserOut, Token
 from app.utils import hash_password, verify_password
 from app.auth import get_db,create_access_token, get_current_user_token
 from fastapi.security import OAuth2PasswordRequestForm
+from fastapi_cache.decorator import cache
 
 router = APIRouter(prefix="/users", tags=["User Management"])
 
@@ -76,6 +77,7 @@ def login_user(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = D
 
 
 @router.get("/me", response_model=UserOut, tags=["User Management"])
+@cache(expire=60)  # Cache for 60 seconds to improve performance.
 def read_users_me(current_user: UserModel = Depends(get_current_user_token)):
     """
     Retrieve the current authenticated user's information.
@@ -92,6 +94,7 @@ def read_users_me(current_user: UserModel = Depends(get_current_user_token)):
 
 
 @router.get("/admin/users", response_model=list[UserOut], tags=["User Management", "Admin"])
+@cache(expire=60)  # Cache for 60 seconds to improve performance.
 def list_users(db: Session = Depends(get_db), current_user: UserModel = Depends(get_current_user_token)):
     """
     Retrieve a list of all users in the system (Admin only).
