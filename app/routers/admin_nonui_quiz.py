@@ -60,6 +60,7 @@ def create_quiz(
         exam_question_count=quiz.exam_question_count,
         randomize_questions=quiz.randomize_questions,
         randomize_choices=quiz.randomize_choices,
+        questions_per_page = quiz.questions_per_page
     )
     
     # Import the related models for questions and choices.
