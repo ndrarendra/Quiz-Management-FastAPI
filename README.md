@@ -1,7 +1,3 @@
-# quiz_test
-[한국글로벌널리지] 백엔드 개발자 실무 과제
-
-
 # Quiz Application Setup and Usage Guide
 
 This guide provides clear instructions for setting up and running the Quiz Application smoothly on MacOS.
